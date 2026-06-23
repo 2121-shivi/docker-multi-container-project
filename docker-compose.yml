@@ -1,0 +1,32 @@
+services:
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "80:80"
+
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "3000:3000"
+
+  redis:
+    image: redis
+    container_name: redis
+
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: dockerdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
+
