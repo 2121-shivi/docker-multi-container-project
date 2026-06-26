@@ -67,7 +67,7 @@ Redis    MySQL
 ## 📂 Project Structure
 
 ```text
-docker-project/
+docker-multi-container-project/
 │
 ├── frontend/
 │   ├── Dockerfile
@@ -78,8 +78,12 @@ docker-project/
 │   ├── server.js
 │   └── package.json
 │
+├── .gitignore
 ├── docker-compose.yml
-└── README.md
+├── README.md
+├── SETUP-GUIDE.md
+├── Docker-Multi-Container-Documentation.pdf
+└── Project Screenshots.pdf
 ```
 
 ---
